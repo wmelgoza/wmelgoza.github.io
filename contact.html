@@ -6,8 +6,22 @@
        <title>William Melgoza</title>
        <meta name="description" content="The best thing about hello world is the greeting">
        <meta name="keywords" content="contact, resume, ">
+       <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
     </head>
     <body>
+    <header>
+
+      <span class="logo">My WebSite</span>
+      <a id="toggleMenu">Menu</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
       <form action="https://formspree.io/xdoarljw" method="POST"></form>
       <div>
         <input type="hidden" name="_subject" value="New submission!">
@@ -34,5 +48,21 @@
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
+          </main>
+          <script>
+
+            var toggleMenu = document.getElementById('toggleMenu');
+            var nav = document.querySelector('nav');
+            toggleMenu.addEventListener(
+              'click',
+              function(){
+                if(nav.style.display=='block'){
+                  nav.style.display='none';
+                }else{
+                  nav.style.display='block';
+                }
+              }
+            );
+          </script>
     </body>
 </html>

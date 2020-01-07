@@ -8,6 +8,18 @@
        <meta name="keywords" content="contact, resume, full stack web developer, hybrid mobile applications developer, lamp, css, javascript, php, linux, front end, back end ">
        <link rel="stylesheet" type="text/css" href="./dist/css/main.css">
     </head>
+    <header>
+
+      <span class="logo">My WebSite</span>
+      <a id="toggleMenu">Menu</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <body>
      <main>
        <h1>William Melgoza</h1>
@@ -51,7 +63,6 @@ service.</ul>
 <p>Computer Engineering</p>
 <h3>MicroTrain Technologies – Chicago, IL 2019</h3>
 <p>Agile Full Stack Web and Hybrid Mobile Application Development</p>
-     </main>
         <nav>
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -59,5 +70,21 @@ service.</ul>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
+        </main>        
+        <script>
+
+          var toggleMenu = document.getElementById('toggleMenu');
+          var nav = document.querySelector('nav');
+          toggleMenu.addEventListener(
+            'click',
+            function(){
+              if(nav.style.display=='block'){
+                nav.style.display='none';
+              }else{
+                nav.style.display='block';
+              }
+            }
+          );
+        </script>
     </body>
 </html>
